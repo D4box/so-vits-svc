@@ -26,8 +26,8 @@ infer_tool.mkdir(["raw", "results"])
 clean_names = args.clean_names
 trans = args.trans
 spk_list = args.spk_list
-slice_db = args.slice_db
-wav_format = args.wav_format
+slice_db = -40
+wav_format = 'wav'
 
 infer_tool.fill_a_to_b(trans, clean_names)
 for clean_name, tran in zip(clean_names, trans):
@@ -57,4 +57,4 @@ for clean_name, tran in zip(clean_names, trans):
 
         res_path = f'./results/{clean_name}_{tran}key_{spk}.{wav_format}'
         soundfile.write(res_path, audio, svc_model.target_sample, format=wav_format)
-Audio(f'./results/{clean_name}_{tran}key_{spk}.{wav_format}')
+Audio('./results/{clean_name}_{tran}key_{spk}.{wav_format}')
