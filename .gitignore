@@ -1,0 +1,14 @@
+__pycache__/
+.vscode/
+dataset/
+dataset_raw/
+filelists/
+logs/
+model/
+raw/
+results/
+configs/
+inference\chunks_temp.json
+hubert/hubert-soft-0d54a1f4.pt
+inference/chunks_temp.json
+configs/config.json
